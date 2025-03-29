@@ -1,10 +1,10 @@
 
 import Head from 'next/head';
-import { attributes, react as HomeContent } from './../app/content/home.md';
+import {attributes, react as HomeContent} from './../app/content/home.md';
 
 
 export default function Testimonials() {
-  let { title, cats } = attributes
+  let {title, cats} = attributes as {title: string, cats: {name: string, description: string;}[];};
   return (
     <>
       <Head>
@@ -23,5 +23,5 @@ export default function Testimonials() {
         </ul>
       </article>
     </>
-  )
+  );
 }
